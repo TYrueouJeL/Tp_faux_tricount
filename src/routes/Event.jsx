@@ -1,4 +1,7 @@
 import {useLoaderData} from "react-router-dom";
+import EventDetails from "../components/EventDetails.jsx";
+
+const ApiUrl = import.meta.env.VITE_API_URL
 
 export async function loader({params}) {
     const response = await fetch(`http://127.0.0.1:8000/api/events/${params.slug}`);
@@ -8,11 +11,6 @@ export async function loader({params}) {
 
 export default function Event() {
     const { event } = useLoaderData();
-    if (!event) {
-        return null;
-    }
 
-    return (
-        <h1>Event : {event.name}</h1>
-    )
+    return (<EventDetails event={event} />);
 }

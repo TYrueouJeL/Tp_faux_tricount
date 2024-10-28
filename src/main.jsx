@@ -5,6 +5,7 @@ import App from './App.jsx'
 import './index.css'
 import Home from "./routes/Home.jsx";
 import Event, { loader as eventLoader } from "./routes/Event.jsx";
+import AddUserPage from "./routes/AddUserPage.jsx";
 
 const router = createBrowserRouter([
     {
@@ -18,7 +19,11 @@ const router = createBrowserRouter([
             {
                 path: '/event/:slug',
                 element: <Event />,
-                loader: eventLoader
+                loader: eventLoader,
+            },
+            {
+                path: '/adduser/:slug',
+                element: <AddUserPage />,
             }
         ]
     }
