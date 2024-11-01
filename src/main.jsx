@@ -6,6 +6,7 @@ import './index.css'
 import Home from "./routes/Home.jsx";
 import Event, { loader as eventLoader } from "./routes/Event.jsx";
 import AddUserPage from "./routes/AddUserPage.jsx";
+import AddExpensePage from "./routes/AddExpensePage.jsx";
 
 const router = createBrowserRouter([
     {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
             {
                 path: '/adduser/:slug',
                 element: <AddUserPage />,
+            },
+            {
+                path: '/addexpense/:slug',
+                element: <AddExpensePage />,
             }
         ]
     }

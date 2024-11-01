@@ -14,6 +14,9 @@ export default function EventDetails({ event }) {
                 <button className="gap-4 p-2 border border-gray-200 rounded-lg">
                     <Link to={`/adduser/${event.slug}`}>Ajouter Membre</Link>
                 </button>
+                <button className="gap-4 p-2 border border-gray-200 rounded-lg">
+                    <Link to={`/addexpense/${event.slug}`}>Ajouter Dépense</Link>
+                </button>
             </article>
             <article className="flex items-center gap-4 p-2 border border-gray-200 rounded-lg">
                 <h2>Membres :</h2>

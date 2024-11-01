@@ -1,8 +1,6 @@
 import {useState} from "react";
 import {useParams} from "react-router-dom";
 
-const ApiUrl = import.meta.env.VITE_API_URL
-
 async function ApiPost(updatedPerson) {
     console.log("Données envoyées :", updatedPerson);
 
@@ -57,9 +55,9 @@ export default function AddUserForm() {
     return (
         <>
             <form onSubmit={handleSubmit} className="flex justify-center gap-4 my-4">
-                <input type="text" name="firstName" placeholder="Enter FirstName"
+                <input type="text" name="firstName" placeholder="Entrez un prénom"
                        className="p-2 border border-gray-200 rounded-lg" required/>
-                <input type="text" name="lastName" placeholder="Enter LastName"
+                <input type="text" name="lastName" placeholder="Entrez un nom"
                        className="p-2 border border-gray-200 rounded-lg" required/>
                 <input type="submit" value="Ajouter membre" className="gap-4 p-2 border border-gray-200 rounded-lg"/>
             </form>
