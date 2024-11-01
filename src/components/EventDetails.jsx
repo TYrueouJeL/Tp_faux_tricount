@@ -18,6 +18,9 @@ export default function EventDetails({ event }) {
                 <h2>Membres :</h2>
                 <MemberList event={event}/>
             </article>
+            <article className="flex items-center gap-4 p-2 border border-gray-200 rounded-lg">
+                <h2>Dépenses :</h2>
+            </article>
         </>
     )
 }

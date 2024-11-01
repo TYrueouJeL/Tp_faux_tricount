@@ -4,6 +4,8 @@ import {useParams} from "react-router-dom";
 const ApiUrl = import.meta.env.VITE_API_URL
 
 async function ApiPost(updatedPerson) {
+    console.log("Données envoyées :", updatedPerson);
+
     try {
         const response = await fetch(`http://127.0.0.1:8000/api/people`, {
             method: "POST",
@@ -27,8 +29,8 @@ export default function AddUserForm() {
     const {slug} = useParams()
 
     const [person, setPerson] = useState({
-        firstname: "",
-        lastname: "",
+        firstName: "",
+        lastName: "",
         expenses: [],
         event: `/api/events/${slug}`,
     })
@@ -41,8 +43,8 @@ export default function AddUserForm() {
 
         const updatedPerson = {
             ...person,
-            firstname: firstnameData,
-            lastname: lastnameData,
+            firstName: firstnameData,
+            lastName: lastnameData,
         }
 
         setPerson(updatedPerson);
