@@ -1,5 +1,6 @@
 import MemberList from "./MemberList.jsx";
 import {Link} from "react-router-dom";
+import ExpenseList from "./ExpenseList.jsx";
 
 export default function EventDetails({ event }) {
 
@@ -20,6 +21,7 @@ export default function EventDetails({ event }) {
             </article>
             <article className="flex items-center gap-4 p-2 border border-gray-200 rounded-lg">
                 <h2>Dépenses :</h2>
+                <ExpenseList expense={event.expenses}/>
             </article>
         </>
     )

@@ -55,10 +55,17 @@ export default function AddUserForm() {
     console.log(person)
 
     return (
-        <form onSubmit={handleSubmit} className="flex justify-center gap-4 my-4">
-            <input type="text" name="firstName" placeholder="Enter FirstName" className="p-2 border border-gray-200 rounded-lg" required/>
-            <input type="text" name="lastName" placeholder="Enter LastName" className="p-2 border border-gray-200 rounded-lg" required/>
-            <input type="submit" value="Ajouter membre" className="gap-4 p-2 border border-gray-200 rounded-lg"/>
-        </form>
+        <>
+            <form onSubmit={handleSubmit} className="flex justify-center gap-4 my-4">
+                <input type="text" name="firstName" placeholder="Enter FirstName"
+                       className="p-2 border border-gray-200 rounded-lg" required/>
+                <input type="text" name="lastName" placeholder="Enter LastName"
+                       className="p-2 border border-gray-200 rounded-lg" required/>
+                <input type="submit" value="Ajouter membre" className="gap-4 p-2 border border-gray-200 rounded-lg"/>
+            </form>
+            <button className="gap-4 p-2 border border-gray-200 rounded-lg">
+                <a href={`/event/${slug}`}>Retour</a>
+            </button>
+        </>
     )
 }
