@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {useParams} from "react-router-dom";
+import {redirect, useParams} from "react-router-dom";
 
 async function ApiPost(updatedPerson) {
     console.log("Données envoyées :", updatedPerson);
@@ -48,6 +48,7 @@ export default function AddUserForm() {
         setPerson(updatedPerson);
 
         ApiPost(updatedPerson);
+        
     }
 
     console.log(person)
